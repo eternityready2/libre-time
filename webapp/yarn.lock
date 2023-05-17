@@ -4097,7 +4097,7 @@ eslint-plugin-storybook@^0.6.12:
     requireindex "^1.1.0"
     ts-dedent "^2.2.0"
 
-eslint-plugin-vue@^9.13.0:
+eslint-plugin-vue@^9.13.0, eslint-plugin-vue@^9.6.0:
   version "9.13.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.13.0.tgz#adb21448e65a7c1502af66103ff5f215632c5319"
   integrity sha512-aBz9A8WB4wmpnVv0pYUt86cmH9EkcwWzgEwecBxMoRNhQjTL5i4sqadnwShv/hOdr8Hbl8XANGV7dtX9UQIAyA==
@@ -4109,6 +4109,14 @@ eslint-plugin-vue@^9.13.0:
     semver "^7.3.5"
     vue-eslint-parser "^9.3.0"
     xml-name-validator "^4.0.0"
+
+eslint-plugin-vuetify@^2.0.0-beta.4:
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vuetify/-/eslint-plugin-vuetify-2.0.0-beta.4.tgz#4858159a3d589b6062fa8a3478c19ffe4574a1f5"
+  integrity sha512-rebRbCrlPmDirqvggt9xFa7qQCGADKMFN40Hft5HCbCu5rF29UWC5Nk30sFRw6+j1ZS/PAmaVxY3fAxHRfjiAg==
+  dependencies:
+    eslint-plugin-vue "^9.6.0"
+    requireindex "^1.2.0"
 
 eslint-scope@^5.1.1:
   version "5.1.1"
@@ -6800,7 +6808,7 @@ request-progress@^3.0.0:
   dependencies:
     throttleit "^1.0.0"
 
-requireindex@^1.1.0:
+requireindex@^1.1.0, requireindex@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.2.0.tgz#3463cdb22ee151902635aa6c9535d4de9c2ef1ef"
   integrity sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==
