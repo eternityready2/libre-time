@@ -19,14 +19,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
+  webapp:
     strategy:
       fail-fast: false
       matrix:
         include:
-          - node-version: "18.12.x"
-
+          - os: [ubuntu-20.04, ubuntu-22.04]
+          - node-version: "18"
+    runs-on: ${{ matrix.os }}
+    
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -35,46 +36,13 @@ jobs:
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
-      - name: Lint
+      - name: Lint with Eslint
         run: yarn lint
         working-directory: webapp
-  
-  prettier:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - node-version: "18.12.x"
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install packages
-        run: yarn install --frozen-lockfile
-        working-directory: webapp
-      - name: Lint
+      - name: Formatting check with Prettier
         run: yarn prettier-check
         working-directory: webapp
-
-  test-build:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - node-version: "18.12.x"
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install packages
-        run: yarn install --frozen-lockfile
-        working-directory: webapp
-      - name: Lint
+      - name: Test build
         run: yarn build
         working-directory: webapp
+  
