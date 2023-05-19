@@ -9,7 +9,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prettier": "prettier --write src",
-    "prettier-check": "prettier --check src"
+    "prettier:check": "prettier --check src",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",

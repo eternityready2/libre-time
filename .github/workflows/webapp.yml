@@ -20,18 +20,15 @@ concurrency:
 
 jobs:
   lint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - node-version: "18"
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "18"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
@@ -43,35 +40,46 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - node-version: "18.12.x"
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "18"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
-      - name: Lint
-        run: yarn prettier-check
+      - name: Check code with Prettier
+        run: yarn prettier:check
+        working-directory: webapp
+        
+  cypress:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+        working-directory: webapp
+      - name: Run tests with Cypress
+        run: yarn cypress:run
         working-directory: webapp
 
   test-build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - node-version: "18.12.x"
 
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "18"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
