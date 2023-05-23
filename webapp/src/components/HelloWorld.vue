@@ -36,7 +36,7 @@
                     >
                         <v-icon icon="mdi-speedometer" size="large" start />
 
-                        Get Started
+                        {{ t("Track Types") }}
                     </v-btn>
                 </v-col>
 
@@ -59,5 +59,7 @@
 </template>
 
 <script setup lang="ts">
-//
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+// return { t }
 </script>
