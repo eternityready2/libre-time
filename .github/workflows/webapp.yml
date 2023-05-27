@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint:
+  eslint-lint:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -38,7 +38,7 @@ jobs:
         run: yarn lint
         working-directory: webapp
           
-  test:
+  cypress-test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -72,6 +72,6 @@ jobs:
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
-      - name: Lint
+      - name: Build
         run: yarn build
         working-directory: webapp
