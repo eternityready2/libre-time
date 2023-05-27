@@ -29,14 +29,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
+          cache: "yarn"
+          cache-dependency-path: "webapp/yarn.lock"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
       - name: Lint
         run: yarn lint
         working-directory: webapp
-  
-  prettier:
+          
+  test:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -46,23 +48,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - name: Install packages
-        run: yarn install --frozen-lockfile
-        working-directory: webapp
-      - name: Check code with Prettier
-        run: yarn prettier:check
-        working-directory: webapp
-        
-  cypress:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+          cache: "yarn"
+          cache-dependency-path: "webapp/yarn.lock"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
@@ -80,6 +67,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
+          cache: "yarn"
+          cache-dependency-path: "webapp/yarn.lock"
       - name: Install packages
         run: yarn install --frozen-lockfile
         working-directory: webapp
