@@ -21,5 +21,11 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "quotes": ["error", "single"],
+        "array-bracket-spacing": ["error", "never"],
+        "array-bracket-newline": ["error", "never"],
+        "no-mixed-spaces-and-tabs": "error",
+        "no-trailing-spaces": "error",
+        "indent": ["error", 2]
     }
 }
