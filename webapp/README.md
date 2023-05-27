@@ -1,44 +1,31 @@
-# default
+# Libretime Vue UI Development
 
 ## Project setup
 
+We use yarn for package management for this Node.js project. If you don't have yarn, install it with
+
 ```
-# yarn
+npm i -g yarn
+```
+
+## Project commands
+
+```
+# install all packages
 yarn
 
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
+# start dev enviornment
 yarn dev
 
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
+# build
 yarn build
 
-# npm
-npm run build
+# run Eslint
+yarn lint
 
-# pnpm
-pnpm build
+# start Storybook runtime
+yarn storybook
+
+# run tests with Cypress
+yarn cypress:run
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
