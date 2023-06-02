@@ -1,7 +1,7 @@
 // Plugins
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
+import VueI18n from '@intlify/unplugin-vue-i18n/vite';
 import { splitVendorChunkPlugin } from 'vite'
 
 // Utilities
@@ -18,9 +18,9 @@ export default defineConfig({
   vuetify({
     autoImport: true,
   }),
-  VueI18nPlugin({
+  VueI18n({
     include: [path.resolve(__dirname, './src/locale/*.json')],
-    escapeHtml: true
+    escapeHtml: true,
   }),
   splitVendorChunkPlugin()],
   define: { 'process.env': {} },
@@ -35,6 +35,15 @@ export default defineConfig({
       '.ts',
       '.tsx',
       '.vue',],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vuei18nmessages: ['@intlify/unplugin-vue-i18n/messages'],
+        }
+      }
+    }
   },
   server: {
     port: 3000,
