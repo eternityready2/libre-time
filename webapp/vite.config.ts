@@ -2,6 +2,7 @@
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
+import { splitVendorChunkPlugin } from 'vite'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -19,7 +20,9 @@ export default defineConfig({
   }),
   VueI18nPlugin({
     include: [path.resolve(__dirname, './src/locale/*.json')],
-  })],
+    escapeHtml: true
+  }),
+  splitVendorChunkPlugin()],
   define: { 'process.env': {} },
   resolve: {
     alias: {

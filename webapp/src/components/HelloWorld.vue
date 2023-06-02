@@ -53,13 +53,14 @@
                         Community
                     </v-btn>
                 </v-col>
+                <v-row>
+                    <LocaleSelect />
+                </v-row>
             </v-row>
         </v-responsive>
     </v-container>
 </template>
 
 <script setup lang="ts">
-// import { useI18n } from "vue-i18n";
-// const { t } = useI18n();
-// // return { t }
+import LocaleSelect from '@/components/LocaleSelect.vue'
 </script>

@@ -8,7 +8,7 @@
 // import { loadFonts } from './webfontloader';
 import vuetify from './vuetify';
 import router from '../router';
-import i18n from './vuei18n';
+import {i18n} from './vuei18n';
 import '@fontsource/roboto'
 
 // Types
