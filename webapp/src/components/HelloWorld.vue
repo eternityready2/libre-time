@@ -36,7 +36,7 @@
                     >
                         <v-icon icon="mdi-speedometer" size="large" start />
 
-                        {{ t("Track Types") }}
+                        {{ $t("Track Types") }}
                     </v-btn>
                 </v-col>
 
@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
-// return { t }
+// import { useI18n } from "vue-i18n";
+// const { t } = useI18n();
+// // return { t }
 </script>
