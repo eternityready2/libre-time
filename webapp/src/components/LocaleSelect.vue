@@ -7,7 +7,7 @@
 </template>
 
 <script lang='ts'>
-    import { i18n, allLocales, setLocale } from '@/plugins/vuei18n';
+    import { allLocales, setLocale } from '@/plugins/vuei18n';
     import { ref, watch } from 'vue';
 
     export default{
