@@ -36,7 +36,7 @@
                     >
                         <v-icon icon="mdi-speedometer" size="large" start />
 
-                        {{ $t("Track Types") }}
+                        {{ $t("Status") }}
                     </v-btn>
                 </v-col>
 

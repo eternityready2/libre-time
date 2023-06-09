@@ -16,7 +16,7 @@
 
             watch(selectedLocale, async (selectedLocale) => {
                 try {
-                    setLocale(selectedLocale)
+                    await setLocale(selectedLocale)
                 } catch (err) {
                     console.log(err)
                 }
