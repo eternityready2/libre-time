@@ -14,7 +14,7 @@ npm i -g yarn
 # install all packages
 yarn
 
-# start dev enviornment
+# start dev environment
 yarn dev
 
 # build

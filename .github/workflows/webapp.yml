@@ -37,7 +37,7 @@ jobs:
       - name: Lint
         run: yarn lint
         working-directory: webapp
-          
+
   cypress-test:
     runs-on: ubuntu-latest
     strategy:
