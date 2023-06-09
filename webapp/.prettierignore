@@ -1,5 +1,5 @@
 dist
 node_modules
 public
-src/locale
+// src/locale
 package.json
