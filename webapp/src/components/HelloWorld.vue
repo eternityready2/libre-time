@@ -62,5 +62,5 @@
 </template>
 
 <script setup lang="ts">
-import LocaleSelect from '@/components/LocaleSelect.vue'
+import LocaleSelect from "@/components/LocaleSelect.vue"
 </script>
