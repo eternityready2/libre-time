@@ -3,6 +3,7 @@
         v-bind:label="$t('Language')"
         :items="allLocales"
         v-model="selectedLocale"
+        variant="underlined"
     ></v-select>
 </template>
 
