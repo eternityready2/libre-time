@@ -23,8 +23,8 @@ yarn build
 # run Eslint
 yarn lint
 
-# start Storybook runtime
-yarn storybook
+# run Prettier, writing formatting changes to files
+npx prettier -w src
 
 # run tests with Cypress
 yarn cypress:run
