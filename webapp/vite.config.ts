@@ -7,6 +7,7 @@ import vuetify, { transformAssetUrls } from "vite-plugin-vuetify"
 // Utilities
 import { defineConfig } from "vite"
 import { fileURLToPath, URL } from "node:url"
+import { resolve } from "node:path"
 // import path from "path"
 
 // https://vitejs.dev/config/
@@ -30,4 +31,12 @@ export default defineConfig({
     server: {
         port: 8080,
     },
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                about: resolve(__dirname, 'src/about/index.html')
+            },
+        }
+    }
 })
