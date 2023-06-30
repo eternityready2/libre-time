@@ -40,4 +40,4 @@ This folder is split up into multiple apps.
 - Main: `index.html` endpoint, `/` in the browser
 - About: `src/about/index.html` endpoint, `/src/about` in the browser
 
-Once built into static pages, the URL paths will be the same as the folder structure mentioned above. Both apps can use the same plugins, components, translations, etc., they just have different endpoints so we can statically build them seperately.
+Once built into static pages, the URL paths will be the same as the folder structure mentioned above. Both apps can use the same plugins, components, translations, etc., they just have different endpoints so we can statically build them separately.
