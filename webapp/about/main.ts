@@ -11,7 +11,7 @@ import App from "./App.vue"
 import { createApp } from "vue"
 
 // Plugins
-import { registerPlugins } from "@/plugins/index"
+import { registerPlugins } from "../src/plugins/index"
 
 const app = createApp(App)
 

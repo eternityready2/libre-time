@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import About from "@/views/About.vue"
+import About from "../src/views/About.vue"
 </script>
