@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.1](https://github.com/libretime/libretime/compare/4.1.0...4.1.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* playlist allocates inaccurate time to smartblocks ([#3026](https://github.com/libretime/libretime/issues/3026)) ([2b43e51](https://github.com/libretime/libretime/commit/2b43e51ed140bf307e491f0fcb7b84f95709d604))
+
 ## [4.1.0](https://github.com/libretime/libretime/compare/4.0.0...4.1.0) (2024-05-05)
 
 
